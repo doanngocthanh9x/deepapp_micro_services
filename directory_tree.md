@@ -1,48 +1,72 @@
 📁 /workspaces/deepapp_micro_services
 
 ├── .gitignore
-├── .vscode
-│   └── settings.json
 ├── README.md
-├── deploy
 ├── directory_tree.md
 ├── docker
-│   └── php_admin_mysql
-│       └── docker-compose.yml
+│   ├── kafka
+│   ├── nginxproxymanager
+│   ├── php_admin_mysql
+│   │   ├── .gitignore
+│   │   └── docker-compose.yml
+│   ├── pocketbase
+│   └── redis
 ├── docs
 │   └── DAY1.MD
-├── frontend
 ├── scripts
 │   └── nodetree.py
 ├── services
-│   ├── java-core-system
-│   ├── node-api-gateway
-│   │   ├── .gitignore
-│   │   ├── package-lock.json
-│   │   ├── package.json
-│   │   ├── prisma
-│   │   │   ├── migrations
-│   │   │   │   ├── 20251204040828_baseline
-│   │   │   │   └── migration_lock.toml
-│   │   │   └── schema.prisma
-│   │   ├── prisma.config.cjs
-│   │   ├── prisma.config.js
-│   │   ├── src
-│   │   │   ├── config
-│   │   │   ├── controllers
-│   │   │   ├── routes
-│   │   │   └── services
-│   │   └── tsconfig.json
-│   └── python-ml-service
+│   └── node-api-gateway
+│       ├── .gitignore
+│       ├── COMPLETED.md
+│       ├── Dockerfile
+│       ├── README.md
+│       ├── check-port.sh
+│       ├── cleanup.sh
+│       ├── config
+│       │   ├── database.js
+│       │   └── swagger.js
+│       ├── kill-all.sh
+│       ├── kill-port.sh
+│       ├── models
+│       │   ├── Application.js
+│       │   ├── ApplicationNote.js
+│       │   ├── Candidate.js
+│       │   ├── CandidateEducation.js
+│       │   ├── CandidateExperience.js
+│       │   ├── CandidateSkill.js
+│       │   ├── Employer.js
+│       │   ├── EmployerReview.js
+│       │   ├── HrProfile.js
+│       │   ├── InterviewSchedule.js
+│       │   ├── Job.js
+│       │   ├── JobAlert.js
+│       │   ├── JobTag.js
+│       │   ├── Message.js
+│       │   ├── Notification.js
+│       │   ├── Product.js
+│       │   ├── SavedJob.js
+│       │   ├── User.js
+│       │   └── index.js
+│       ├── package-lock.json
+│       ├── package.json
+│       ├── routes
+│       │   ├── jobs.js
+│       │   ├── products.js
+│       │   └── users.js
+│       ├── scripts
+│       │   └── generate-models.js
+│       ├── server.js
+│       ├── start.sh
+│       └── utils
+│           └── generateSwaggerFromExpress.js
 └── shared
-    ├── configs
     ├── database_ddl
     │   ├── mysql
+    │   │   ├── init.sql
     │   │   └── script01.sql
     │   └── postgre
     │       └── script01.sql
-    ├── images
-    │   └── logo
-    │       └── deepapp.png
-    ├── protos
-    └── sdk
+    └── images
+        └── logo
+            └── deepapp.png

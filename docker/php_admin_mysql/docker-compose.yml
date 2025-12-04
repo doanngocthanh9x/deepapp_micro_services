@@ -15,6 +15,8 @@ services:
       - ./data:/var/lib/mysql
     ports:
       - "3306:3306"
+    networks:
+      - app-network
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -22,9 +24,14 @@ services:
     restart: always
     environment:
       PMA_HOST: mysql
-     
       TZ: Asia/Ho_Chi_Minh
     ports:
-      - "8080:80"
+      - "6868:80"
     depends_on:
       - mysql
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge
+   

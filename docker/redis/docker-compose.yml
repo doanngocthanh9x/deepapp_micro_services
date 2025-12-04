@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  cache:
+    image: redis:6.2-alpine
+    restart: always
+    ports:
+      - "6379:6379"
+    command: ["redis-server", "--save", "20", "1", "--loglevel", "warning", "--requirepass", "yourpassword"]
+    volumes:
+      - cache:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "yourpassword", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+volumes:
+  cache:
+    driver: local

@@ -21,22 +21,6 @@
 ├── services
 │   ├── java-core-system
 │   ├── node-api-gateway
-│   │   ├── .gitignore
-│   │   ├── package-lock.json
-│   │   ├── package.json
-│   │   ├── prisma
-│   │   │   ├── migrations
-│   │   │   │   ├── 20251204040828_baseline
-│   │   │   │   └── migration_lock.toml
-│   │   │   └── schema.prisma
-│   │   ├── prisma.config.cjs
-│   │   ├── prisma.config.js
-│   │   ├── src
-│   │   │   ├── config
-│   │   │   ├── controllers
-│   │   │   ├── routes
-│   │   │   └── services
-│   │   └── tsconfig.json
 │   └── python-ml-service
 └── shared
     ├── configs
