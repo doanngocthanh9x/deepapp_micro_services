@@ -1,7 +1,3 @@
-
-## 📂 DeepApp
-
-```
 📁 /workspaces/deepapp_micro_services
 
 ├── .gitignore
@@ -50,5 +46,3 @@
     │       └── deepapp.png
     ├── protos
     └── sdk
-
-```
